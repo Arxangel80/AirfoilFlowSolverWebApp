@@ -1,0 +1,427 @@
+ body {
+     overflow: scroll;
+     background-image: url('../img/Background.jpg');
+     background-repeat: no-repeat;
+     background-color: #000000;
+     background-attachment: fixed;
+     background-size: 100% 100%;
+     color: rgb(255, 255, 255);
+ }
+
+ .content {
+     padding: 0.1em 0.8em;
+     display: grid;
+     grid-template-columns: 2fr 3fr;
+     grid-template-rows: 0.01fr 0.2fr 0.5fr;
+     grid-column-gap: 2vh;
+     grid-row-gap: 0px;
+     font-family: Verdana;
+ }
+
+ .alertmsg {
+     grid-area: 1 / 1 / 2 / 3;
+     background-color: #532478;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 1.2em
+ }
+
+ .alertmsg p {
+     color: #111;
+     font-size: 2.5vh;
+     margin-top: 2%;
+     margin-bottom: 2%;
+ }
+
+ .Rad {
+     grid-area: 2 / 1 / 3 / 3;
+     display: grid;
+     justify-content: center;
+ }
+
+ .InputChoose {
+     grid-template-columns: 1fr 1fr;
+     display: grid;
+     align-content: center;
+     align-items: center;
+     margin: 0;
+ }
+
+ .l-radio {
+     font-weight: bold;
+     padding-left: 10px;
+     padding-right: 10px;
+     border-radius: 50px;
+     display: grid;
+     justify-items: center;
+     cursor: pointer;
+     transition: background .2s ease;
+     margin: 5px 5px;
+     -webkit-tap-highlight-color: transparent;
+ }
+
+ .l-radio:hover,
+ .l-radio:focus-within {
+     background: rgba(#9F9F9F, .1);
+ }
+
+
+ .RadioChoose {
+     vertical-align: middle;
+     width: 20px;
+     height: 20px;
+     border-radius: 10px;
+     background: none;
+     border: 0;
+     box-shadow: f inset 0 0 0 1pxs #9F9F9F;
+     box-shadow: inset 0 0 0 1.5px #9F9F9F;
+     appearance: none;
+     padding: 0;
+     margin: 0;
+     transition: box-shadow 150ms cubic-bezier(.95, .15, .5, 1.25);
+     pointer-events: none
+ }
+
+ .RadioChoose:focus {
+     outline: none
+ }
+
+ .RadioChoose:checked {
+     box-shadow: inset 0 0 0 6px #6743ee
+ }
+
+
+ /* Wprowadzenie dannych */
+ .InputForm {
+     grid-area: 3 / 1 / 4 / 3;
+     display: grid;
+
+ }
+
+ #FileForm,
+ #PasteForm {
+     display: grid;
+     grid-template-columns: 1.5fr 0.5fr;
+     align-items: center;
+     min-height: 130px;
+     margin: 0;
+ }
+
+ #AirfoilData::file-selector-button {
+     height: 3rem;
+     background-image: linear-gradient(to right,
+             #455EB5,
+             #673FD7,
+             #532478 50%,
+             #D973D9 100%);
+     font-family: "Inter UI",
+         "SF Pro Display",
+         -apple-system,
+         BlinkMacSystemFont,
+         "Segoe UI",
+         Roboto,
+         Oxygen,
+         Ubuntu,
+         Cantarell,
+         "Open Sans",
+         "Helvetica Neue",
+         sans-serif;
+     font-size: 2.5vh;
+     font-weight: 500;
+     background-position-x: 0%;
+     background-size: 200%;
+     border: 0;
+     border-radius: 12px;
+     color: #fff;
+     padding: 0 1.2rem;
+     text-shadow: 0 1px 1px #333;
+     transition: all 0.25s;
+     z-index: 2;
+     position: relative;
+ }
+
+ #AirfoilData::file-selector-button:hover {
+     background-position-x: 100%;
+     transform: scale(1.1);
+ }
+
+ #TextCoords {
+     background-color: #000000;
+     margin-top: 10;
+     color: white;
+ }
+
+ #TextCoords::placeholder {
+     font-weight: 500;
+     padding: 0.1em 0.4em;
+     opacity: 0.5;
+ }
+
+ textarea::-webkit-scrollbar {
+     width: 12px;
+ }
+
+
+ textarea::-webkit-scrollbar-track {
+     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
+ }
+
+ textarea::-webkit-scrollbar-thumb {
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
+     background: rgba(85, 36, 122, 0.8);
+     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+ }
+
+ #AirfoilData {
+     font-weight: bold;
+ }
+
+ .Button {
+     background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+     border-radius: 12px;
+     border-style: none;
+     box-sizing: border-box;
+     color: #FFFFFF;
+     cursor: pointer;
+     flex-shrink: 0;
+     font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+     font-size: 2.5vh;
+     font-weight: 500;
+     height: 3rem;
+     padding: 0 1.2rem;
+     margin: 0.2em 0.2em;
+     text-align: center;
+     text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+     transition: all .5s;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+ }
+
+ .Button:hover {
+     box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+     transition-duration: .1s;
+     z-index: 1;
+ }
+
+ #TextCoords {
+     font-family: "Inter UI",
+         "SF Pro Display",
+         -apple-system,
+         BlinkMacSystemFont,
+         "Segoe UI",
+         Roboto,
+         Oxygen,
+         Ubuntu,
+         Cantarell,
+         "Open Sans",
+         "Helvetica Neue",
+         sans-serif;
+     font-size: 2vh;
+     box-shadow: 2px 2px 8px rgba(black, .3);
+     border: 12;
+     border-radius: 4px;
+ }
+
+ /* Formy do wprowadzenia warunków obliczeń */
+ .Calc {
+     grid-area: 4 / 1 / 6 / 3;
+ }
+
+ .degreeStyle {
+     font-size: 3vh;
+     margin: 0 5px;
+     padding-bottom: 17px;
+ }
+
+ .Calc form {
+     display: grid;
+     grid-template-rows: repeat(4, 1fr);
+ }
+
+ .CalcFormContainer {
+     display: grid;
+     grid-template-rows: repeat(2, 1fr);
+     grid-template-columns: 1fr 0.2fr;
+     align-items: center;
+ }
+
+ .CalcFormContainer input {
+     background-color: #000000;
+     border-radius: 12px;
+ }
+
+ .Calc label {
+     display: grid;
+     grid-column-start: 1;
+     grid-column-end: 3;
+     margin: 2px;
+     justify-self: left;
+     align-self: end;
+ }
+
+ .Calc math {
+     grid-column-start: 6fr;
+     grid-column-end: 3;
+     justify-self: center;
+     align-self: center;
+     font-size: 2.5vh;
+ }
+
+ .Calc input {
+     padding: 0.1em 0.4em;
+     color: white;
+ }
+
+ .Calc input::placeholder {
+     font-weight: 500;
+     opacity: 0.5;
+     font-size: 2.2vh;
+ }
+
+ .Calc button {
+     margin: 20px 0px;
+ }
+
+ #Pannum {
+     grid-area: 2 / 1 / 3 / 2;
+     appearance: none;
+     width: calc(100% - (73px));
+     height: 10px;
+     border-radius: 5px;
+     background: #d7dcdf;
+     outline: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .PanNumContainer label {
+     grid-area: 1 / 1 / 2 / 2;
+ }
+
+ #Pannum::-webkit-slider-thumb {
+     appearance: none;
+     width: 20px;
+     height: 20px;
+     border-radius: 100%;
+     background: #2c3e50;
+     cursor: pointer;
+     transition: background 0.15s ease-in-out;
+ }
+
+ #Pannum:active::-webkit-slider-thumb {
+     transform: scale(1.2);
+     background: #55247a;
+ }
+
+ #Pannum::-webkit-slider-thumb:hover {
+     transform: scale(1.2);
+     background: #55247a;
+ }
+
+ #RangeSliderValue {
+     grid-area: 2 / 2 / 3 / 3;
+     border: none;
+     display: inline-block;
+     position: relative;
+     width: 100%;
+     height: 70%;
+     color: #fff;
+     line-height: 20px;
+     text-align: center;
+     border-radius: 12px;
+     border-width: 1.5px;
+     border-style: inset;
+     border-color: (rgb(118, 118, 118), rgb(133, 133, 133));
+     background: #000;
+     padding: 5px 10px;
+     margin-right: 5vh;
+ }
+
+ #RangeSliderValue:after {
+     position: absolute;
+     top: 8px;
+     left: -7px;
+     width: 0;
+     height: 0;
+     border-top: 7px solid transparent;
+     border-right: 7px solid #2c3e50;
+     border-bottom: 7px solid transparent;
+     content: "";
+ }
+
+
+ /* Wyniki */
+ .Result {
+     grid-area: 1 / 3 / 6 / 6;
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr;
+     grid-template-columns: 1fr;
+     gap: 3vh 3vh;
+ }
+
+ .PlotContainer img {
+     margin: auto;
+     width: 100%;
+     height: 100%;
+ }
+
+ .PlotContainer {
+     width: 125vh;
+     height: 39vh;
+     border: #000;
+     border-radius: 5px;
+     border-style: double;
+     grid-column: 1 / 3;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .OutputData {
+     display: flex;
+     border-radius: 12px;
+     border-width: 1.5px;
+     border-style: inset;
+     border-color: (rgb(118, 118, 118), rgb(133, 133, 133));
+     background: #111;
+     width: auto;
+     align-items: center;
+     padding-left: 2vh;
+     padding-top: 2.5vh;
+ }
+
+
+ .OutputContainer {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(4, 1fr);
+     gap: 3vh 5vh
+ }
+
+ .Downloadbut {
+     grid-row: 3 / 4;
+ }
+
+ .carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+
+ }
+
+ .carousel-control-prev-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+
+ }
+
+ .footer {
+     background-color: #111;
+     height: 50px;
+     width: 100%;
+     position: fixed;
+ }
