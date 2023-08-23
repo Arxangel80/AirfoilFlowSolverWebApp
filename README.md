@@ -7,5 +7,5 @@ pip install -r requirements.txt
 python app.py
 ```
 
-##Acknowledgments
+## Acknowledgments
 This project was inspired by the learning material from the AeroPython repository. A big thank you to the Barba Group for providing such great educational resources.
